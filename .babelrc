@@ -1,0 +1,29 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false,
+          "targets": {
+            "safari": 11,
+            "ie": 11,
+            "chrome": 46,
+            "firefox": 52
+          }
+        }
+      ]
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          ["@babel/preset-env", { "targets": { "node": "current" } }]
+        ],
+        "plugins": [
+          "transform-dynamic-import"
+        ]
+      }
+    },
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import"
+    ]
+  }
